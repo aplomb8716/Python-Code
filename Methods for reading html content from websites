@@ -19,3 +19,10 @@ print(html)
 
 # Be polite and close the response!
 response.close()
+
+# Simpler method for reading in html from websites
+import requests
+url = "https://www.npr.org/"
+ask = requests.get(url)
+text = ask.text
+print(text)
