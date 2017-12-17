@@ -1,0 +1,21 @@
+# Content for the structure of this code and variable names come from my DataCamp, data science course
+# Import packages
+from urllib.request import urlopen, Request
+
+# Specify the url
+url = "https://www.npr.org/"
+
+# This packages the request
+request = Request(url)
+
+# Sends the request and catches the response: response
+response = urlopen(request)
+
+# Extract the response: html
+html = response.read()
+
+# Print the html
+print(html)
+
+# Be polite and close the response!
+response.close()
